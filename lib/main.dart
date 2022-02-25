@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './screens/homepage.dart';
+import './screens/login_page.dart';
 
 void main() => runApp(const MyApp());
 
@@ -11,10 +12,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Catalog App',
       theme: ThemeData(
-        primarySwatch: Colors.pink,
+        primarySwatch: Colors.indigo,
       ),
-      home: const HomePage(),
       debugShowCheckedModeBanner: false,
+      routes: {
+        '/': (context) => const LoginPage(),
+        '/home': (context) => const HomePage(),
+        '/login': (context) => const LoginPage(),
+      },
     );
   }
 }

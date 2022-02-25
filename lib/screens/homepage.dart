@@ -10,6 +10,10 @@ class HomePage extends StatelessWidget {
         title: const Text("Catalog App"),
         centerTitle: true,
       ),
+      body: const Center(
+        child: Text("Hello World"),
+      ),
+      drawer: const Drawer(),
     );
   }
 }
